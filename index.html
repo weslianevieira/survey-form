@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">Blood Donation Survey Form</h1>
+      <p id="description">
+        Wanna see if you are up to donate blood? Fill out this form and see.
+      </p>
+    </header>
+    <form id="survey-form" action="/submit" method="post">
+      <fieldset>
+        <label id="name-label" for="name"
+          >Enter Your Name:
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Jhon"
+            required
+          />
+        </label>
+        <label for="email" id="email-label"
+          >Enter Your Email:
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="jhon@gmail.com"
+            required
+          />
+        </label>
+        <label for="number" id="number-label"
+          >Enter Your Age:
+          <input
+            id="number"
+            name="age"
+            placeholder="27"
+            min="16"
+            max="69"
+            type="number"
+            required
+        /></label>
+        <label for="weight" id="weight-label"
+          >Enter Your Weight:
+          <input
+            id="weight"
+            name="weight"
+            type="number"
+            placeholder="75"
+            min="50"
+            required
+          />kg
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="document"
+          >Which original document with recent photo do you have?
+        </label>
+        <select name="document" id="dropdown">
+          <option disabled selected value="">(choose one)</option>
+          <option value="1">RG</option>
+          <option value="2">RG Digital</option>
+          <option value="3">CNH</option>
+          <option value="4">CNH Digital</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>How are you feelings?</legend>
+        <label for="well">
+          <input value="well" name="well-bad" type="radio" checked required />
+          Rested & Well fed
+        </label>
+        <label for="bad"
+          ><input value="bad" name="well-bad" type="radio" /> Tired &
+          Hungry</label
+        >
+      </fieldset>
+      <fieldset>
+        <legend>You have not... <em>(Check all that apply)</em></legend>
+        <label for="checkbox"
+          ><input type="checkbox" id="checkbox" name="checkbox" required />
+          Drank alcohol in the last 12 hours.</label
+        >
+        <label for=""
+          ><input type="checkbox" required /> Caught a cold in the last 7
+          days.</label
+        >
+        <label for=""
+          ><input type="checkbox" required /> Got a tattoo in the last 6
+          months.</label
+        >
+        <label for=""
+          ><input type="checkbox" required /> Extracted a tooth.</label
+        >
+        <label for=""
+          ><input type="checkbox" required /> Performed acupuncture in the last
+          24 hours.</label
+        >
+        <label for=""
+          ><input type="checkbox" required /> Piercing your ear or other area in
+          the last 6 months.</label
+        >
+      </fieldset>
+      <fieldset>
+        <legend>Some doubt? Ask us</legend>
+        <textarea name="doubt" id="doubt" cols="30" rows="5" placeholder="I have doubts about..."></textarea>
+      </fieldset>
+      <input type="submit" value="submit">
+    </form>
+  </body>
+</html>
